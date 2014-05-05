@@ -1,0 +1,7 @@
+.kitchen.local.yml
+.kitchen/
+.products/
+.rpmbuild/
+Berksfile.lock
+encrypted_data_bag_secret
+Gemfile.lock
