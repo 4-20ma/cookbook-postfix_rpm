@@ -8,7 +8,14 @@ Builds a `postfix` binary RPM. The primary use case for this cookbook is to leve
 - create a pristine virtual machine
 - download, build, & package `postfix` source code
 
-The newly-created RPM will be located in `.products/postfix-x.y.z-r.el6.x86_64.rpm`.
+The newly-created RPM will be located at:
+
+````text
+.
+└── .products
+    ├── postfix-2.11.0-1.el6.x86_64.rpm
+    └── postfix-perl-scripts-2.11.0-1.el6.x86_64.rpm
+````
 
 
 Requirements
