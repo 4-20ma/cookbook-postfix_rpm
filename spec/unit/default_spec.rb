@@ -15,6 +15,15 @@ describe 'postfix.rpm::default' do
 
           # set cookbook attributes
           node.set['postfix']['devel_packages'] = %w(package2)
+          node.set['postfix']['options']['ipv6'] = true
+          node.set['postfix']['options']['ldap'] = true
+          node.set['postfix']['options']['mysql'] = true
+          node.set['postfix']['options']['pcre'] = true
+          node.set['postfix']['options']['pflogsumm'] = true
+          node.set['postfix']['options']['pgsql'] = true
+          node.set['postfix']['options']['sasl'] = true
+          node.set['postfix']['options']['sqlite'] = true
+          node.set['postfix']['options']['tls'] = true
         end.converge(described_recipe)
       end # let
 
@@ -192,10 +201,54 @@ describe 'postfix.rpm::default' do
       end # describe
 
       describe "#{specs}/postfix.spec" do
-        # TODO: add examples for template content
         it 'creates template with expected owner, group' do
           expect(chef_run).to create_template(subject)
             .with_owner('vagrant').with_group('vagrant')
+        end # it
+
+        it 'renders file with expected IPV6' do
+          expect(chef_run).to render_file(subject)
+            .with_content('%define IPV6 1')
+        end # it
+
+        it 'renders file with expected LDAP' do
+          expect(chef_run).to render_file(subject)
+            .with_content('%define LDAP 1')
+        end # it
+
+        it 'renders file with expected MYSQL' do
+          expect(chef_run).to render_file(subject)
+            .with_content('%{?!MYSQL: %define MYSQL 1}')
+        end # it
+
+        it 'renders file with expected PCRE' do
+          expect(chef_run).to render_file(subject)
+            .with_content('%define PCRE 1')
+        end # it
+
+        it 'renders file with expected PFLOGSUMM' do
+          expect(chef_run).to render_file(subject)
+            .with_content('%define PFLOGSUMM 1')
+        end # it
+
+        it 'renders file with expected PGSQL' do
+          expect(chef_run).to render_file(subject)
+            .with_content('%{?!PGSQL: %define PGSQL 1}')
+        end # it
+
+        it 'renders file with expected SASL' do
+          expect(chef_run).to render_file(subject)
+            .with_content('%define SASL 2')
+        end # it
+
+        it 'renders file with expected SQLITE' do
+          expect(chef_run).to render_file(subject)
+            .with_content('%{?!SQLITE: %define SQLITE 1}')
+        end # it
+
+        it 'renders file with expected TLS' do
+          expect(chef_run).to render_file(subject)
+            .with_content('%define TLS 1')
         end # it
       end # describe
 
