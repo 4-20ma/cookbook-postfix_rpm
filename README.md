@@ -3,7 +3,7 @@ postfix.rpm Cookbook
 [![Build Status](https://travis-ci.org/4-20ma/cookbook-postfix.rpm.png?branch=master)](https://travis-ci.org/4-20ma/cookbook-postfix.rpm)
 [![Dependency Status](https://gemnasium.com/4-20ma/cookbook-postfix.rpm.png)](https://gemnasium.com/4-20ma/cookbook-postfix.rpm)
 
-Builds a `postfix` binary RPM. The primary use case for this cookbook is to leverage Test Kitchen to:
+Creates rpm package for `postfix`. The primary use case for this cookbook is to leverage Test Kitchen to:
 
 - create a pristine virtual machine
 - download, build, & package `postfix` source code
@@ -80,7 +80,7 @@ Use Test Kitchen to converge the node and retrieve the resultant RPM from `.prod
 $ kitchen converge
 ````
 
-Optionally, the following command will converge the node and automatically destroy it when finished. Retrieve the RPM from `.products/`.
+Alternatively, the following command will converge the node and automatically destroy it when finished. Retrieve the RPM from `.products/`.
 
 ````bash
 $ kitchen test
