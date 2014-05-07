@@ -50,6 +50,7 @@ describe 'postfix.rpm::default' do
       end # describe
 
       #------------------------------------------------------------- package[]
+      # packages required to build all rpms
       describe 'automake' do
         it 'installs described package' do
           expect(chef_run).to install_package(subject)
@@ -68,6 +69,7 @@ describe 'postfix.rpm::default' do
         end # it
       end # describe
 
+      # packages required specifically for postfix
       describe 'package2-devel' do
         it 'installs described package' do
           expect(chef_run).to install_package(subject)
