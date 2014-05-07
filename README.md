@@ -62,14 +62,10 @@ Recipes
 -------
 This cookbook provides one main recipe for building a binary RPM and an optional recipe for downloading a source RPM.
 
-- `default.rb` - *Use this recipe* to build binary RPM.
-- `source.rb` - Use this optional recipe to download source RPM.
-
-### default
-This recipe builds a `postfix` binary RPM.
-
-### source
-This optional recipe downloads `postfix` source RPM.
+Name                            | Description
+--------------------------------|------------
+[`default`](recipes/default.rb) | use this recipe to build a binary RPM
+[`source`](recipes/source.rb)   | use this recipe to download a source RPM (optional--for RPM development)
 
 
 Usage
