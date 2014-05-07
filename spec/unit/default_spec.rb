@@ -261,7 +261,7 @@ describe 'postfix.rpm::default' do
             .and_return(false)
           expect(chef_run).to run_bash(subject)
             .with_user('vagrant').with_group('vagrant')
-            .with_environment('HOME' => '/home/vagrant')
+            .with_environment('HOME' => home.to_s)
         end # it
 
         it 'does not run described bash script if file exists' do
