@@ -11,6 +11,7 @@
 # config: /etc/postfix/master.cf
 #
 # Based on startup script from Simon J Mudd <sjmudd@pobox.com>
+# 2014-05-08: Remove status cmd -b switch by Doc Walker <4-20ma@wvfans.net>
 # 25/02/99: Mostly s/sendmail/postfix/g by John A. Martin <jam@jamux.com>
 # 23/11/00: Changes & suggestions by Ajay Ramaswamy <ajayr@bigfoot.com>
 # 20/01/01: Changes to fall in line with RedHat 7.0 style
@@ -23,7 +24,7 @@
 # Default-Start: 2 3 4 5
 # Default-Stop: 0 1 6
 # Short-Description: start and stop postfix
-# Description: Postfix is a Mail Transport Agent, which is the program that 
+# Description: Postfix is a Mail Transport Agent, which is the program that
 #              moves mail from one machine to another.
 ### END INIT INFO
 
@@ -43,7 +44,7 @@ ALIASESDB_STAMP=/var/lib/misc/postfix.aliasesdb-stamp
 # Script to update chroot environment
 CHROOT_UPDATE=/etc/postfix/chroot-update
 
-status -p $pidfile -l $(basename $lockfile) -b /usr/libexec/postfix/master master >/dev/null 2>&1
+status -p $pidfile -l $(basename $lockfile) /usr/libexec/postfix/master master >/dev/null 2>&1
 running=$?
 
 conf_check() {
@@ -151,7 +152,7 @@ case "$1" in
 	check
 	;;
   status)
-	status -p $pidfile -l $(basename $lockfile) -b /usr/libexec/postfix/master master
+	status -p $pidfile -l $(basename $lockfile) /usr/libexec/postfix/master master
 	;;
   condrestart)
 	[ $running -eq 0 ] || exit 0
