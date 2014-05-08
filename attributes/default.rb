@@ -8,7 +8,7 @@ default['postfix'].tap do |postfix|
   postfix['devel_packages'] = %w(db4 zlib)
   postfix['name'] = 'postfix'
   postfix['version'] = '2.11.0' # NOTE: may be overridden in .kitchen.yml
-  postfix['release'] = '1'      # NOTE: may be overridden in .kitchen.yml
+  postfix['release'] = '0'      # NOTE: may be overridden in .kitchen.yml
   postfix['pre_tidy'] = false   # NOTE: may be overridden in .kitchen.yml
   postfix['post_tidy'] = false  # NOTE: may be overridden in .kitchen.yml
 
