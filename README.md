@@ -13,8 +13,8 @@ The newly-created RPM will be located at:
 ````text
 .
 └── .products
-    ├── postfix-2.11.0-1.el6.x86_64.rpm
-    └── postfix-perl-scripts-2.11.0-1.el6.x86_64.rpm
+    ├── postfix-x.y.z-r.el6.x86_64.rpm
+    └── postfix-perl-scripts-x.y.z-r.el6.x86_64.rpm
 ````
 
 
