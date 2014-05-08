@@ -9,6 +9,9 @@ describe 'postfix.rpm::default' do
   rpms = rpmbuild + 'RPMS'
   sources = rpmbuild + 'SOURCES'
   specs = rpmbuild + 'SPECS'
+  postfix_ver = 'postfix-2.11.0'
+  pflogsumm_ver = 'pflogsumm-1.1.1'
+  release = '0'
 
   #----------------------------------------- file[/home/vagrant/.bash_profile]
   describe file('/home/vagrant/.bash_profile') do
@@ -187,7 +190,7 @@ describe 'postfix.rpm::default' do
   end # describe
 
   #--------- remote_file[/home/vagrant/rpmbuild/SOURCES/postfix-2.11.0.tar.gz]
-  describe file('/home/vagrant/rpmbuild/SOURCES/postfix-2.11.0.tar.gz') do
+  describe file("/home/vagrant/rpmbuild/SOURCES/#{postfix_ver}.tar.gz") do
     it 'is a file' do
       expect(subject).to be_file
     end # it
@@ -205,8 +208,8 @@ describe 'postfix.rpm::default' do
     end # it
   end # describe
 
-  #----------------------------------------------------------- cookbook_file[]
-  describe file("#{sources}/pflogsumm-1.1.1.tar.gz") do
+  #------ cookbook_file[/home/vagrant/rpmbuild/SOURCES/pflogsumm-1.1.1.tar.gz]
+  describe file("#{sources}/#{pflogsumm_ver}.tar.gz") do
     it 'is a file' do
       expect(subject).to be_file
     end # it
@@ -225,7 +228,7 @@ describe 'postfix.rpm::default' do
   end # describe
 
   #---------------------------------------------------------------- template[]
-  describe file("#{sources}/pflogsumm-1.1.1-datecalc.patch") do
+  describe file("#{sources}/#{pflogsumm_ver}-datecalc.patch") do
     it 'is a file' do
       expect(subject).to be_file
     end # it
@@ -243,7 +246,7 @@ describe 'postfix.rpm::default' do
     end # it
   end # describe
 
-  describe file("#{sources}/postfix-2.11.0-config.patch") do
+  describe file("#{sources}/#{postfix_ver}-config.patch") do
     it 'is a file' do
       expect(subject).to be_file
     end # it
@@ -261,7 +264,7 @@ describe 'postfix.rpm::default' do
     end # it
   end # describe
 
-  describe file("#{sources}/postfix-2.11.0-files.patch") do
+  describe file("#{sources}/#{postfix_ver}-files.patch") do
     it 'is a file' do
       expect(subject).to be_file
     end # it
@@ -406,7 +409,7 @@ describe 'postfix.rpm::default' do
   end # describe
 
   #------------------------------------------------------------ bash[rpmbuild]
-  describe file("#{rpms}/x86_64/postfix-2.11.0-1.el6.x86_64.rpm") do
+  describe file("#{rpms}/x86_64/#{postfix_ver}-#{release}.el6.x86_64.rpm") do
     it 'is a file' do
       expect(subject).to be_file
     end # it
@@ -425,7 +428,7 @@ describe 'postfix.rpm::default' do
   end # describe
 
   #------------------------------------------------- bash[copy_final_products]
-  describe file("#{products}/postfix-2.11.0-1.el6.x86_64.rpm") do
+  describe file("#{products}/#{postfix_ver}-#{release}.el6.x86_64.rpm") do
     it 'is a file' do
       expect(subject).to be_file
     end # it
