@@ -71,8 +71,8 @@ Source101: postfix-pam.conf
 
 # Patches
 
-Patch1: postfix-2.11.0-config.patch
-Patch2: postfix-2.11.0-files.patch
+Patch1: postfix-2.11.1-config.patch
+Patch2: postfix-2.11.1-files.patch
 Patch3: postfix-alternatives.patch
 Patch8: postfix-large-fs.patch
 Patch9: pflogsumm-1.1.1-datecalc.patch
@@ -501,6 +501,9 @@ rm -rf $RPM_BUILD_ROOT
 %endif
 
 %changelog
+* Sat Jun 21 2014 Doc Walker <4-20ma@wvfans.net> - 1:2.11.1-0
+- Update to postfix-2.11.1
+
 * Mon Apr 28 2014 Doc Walker <4-20ma@wvfans.net> - 1:2.11.0-1
 - Update to postfix-2.11.0
 
