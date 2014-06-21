@@ -68,6 +68,61 @@ Name                            | Description
 [`source`](recipes/source.rb)   | use this recipe to download a source RPM (optional--for RPM development)
 
 
+Update
+------
+To update to a new version of `postfix`, do the following:
+
+File / Section(s)            | Description
+-----------------------------|------------
+[.kitchen.yml](.kitchen.yml) |
+`attributes/postfix/version` | update to new postfix version
+`attributes/postfix/release` | reset to 0 for new postfix version (increment if new rpm release of same postfix version)
+&nbsp;                       | &nbsp;
+[SOURCES](templates/default/SOURCES)|
+`postfix-x.y.z-config.patch` | rename to match postfix version; update patch, if necessary
+`postfix-x.y.z-files.patch`  | rename to match postfix version; update patch, if necessary
+&nbsp;                       | &nbsp;
+[postfix.spec.erb](templates/default/SPECS/postfix.spec.erb)|
+`Patch1`                     | update patch filename to match postfix version
+`Patch2`                     | update patch filename to match postfix version
+`%changelog`                 | update changelog with pertinent information
+&nbsp;                       | &nbsp;
+[postfix_spec.rb](test/integration/postfix/serverspec/postfix_spec.rb)|
+`postfix_ver`                | update to match postfix version
+`release`                    | update to match release
+
+Run `rake` to ensure syntax, lint, and unit tests pass.
+
+````bash
+$ bundle exec rake
+````
+
+Use Test Kitchen to run integration tests (converge, verify, and destroy the node if everything tests OK).
+
+````bash
+$ bundle exec kitchen test
+````
+
+Create a feature branch, stage & commit the changes, and push the branch.
+
+````bash
+$ git checkout -b branch_name
+$ git add -A
+$ git commit
+$ git push --set-upstream origin branch_name
+````
+
+Create a pull request and merge once travis-ci tests pass.
+
+Update `CHANGELOG`, bump version in `metadata.rb`, stage & commit the changes, and push the branch (OK to add [skip ci] to commit message to skip travis-ci).
+
+Release the updated cookbook (stash any uncommitted changes before releasing).
+
+````bash
+$ bundle exec rake release
+````
+
+
 Usage
 -----
 Use Test Kitchen to converge the node and retrieve the resultant RPM from `.products/`.
