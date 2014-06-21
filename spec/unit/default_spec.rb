@@ -114,7 +114,7 @@ describe 'postfix.rpm::default' do
         end # it
       end # describe
 
-      #----- remote_file[/home/vagrant/rpmbuild/SOURCES/postfix-2.11.0.tar.gz]
+      #------ remote_file[/home/vagrant/rpmbuild/SOURCES/postfix-x.y.z.tar.gz]
       describe "#{sources}/postfix-2.11.0.tar.gz" do
         it 'creates remote file unless file exists' do
           allow_any_instance_of(Pathname).to receive(:file?)
