@@ -10,6 +10,7 @@ describe 'postfix.rpm::default' do
       let(:chef_run) do
         ChefSpec::Runner.new(i) do |node|
           # override cookbook attributes
+          node.override['postfix']['version'] = '1.2.3'
           node.override['postfix']['pre_tidy'] = true
           node.override['postfix']['post_tidy'] = true
 
@@ -114,8 +115,8 @@ describe 'postfix.rpm::default' do
         end # it
       end # describe
 
-      #----- remote_file[/home/vagrant/rpmbuild/SOURCES/postfix-2.11.0.tar.gz]
-      describe "#{sources}/postfix-2.11.0.tar.gz" do
+      #------ remote_file[/home/vagrant/rpmbuild/SOURCES/postfix-x.y.z.tar.gz]
+      describe "#{sources}/postfix-1.2.3.tar.gz" do
         it 'creates remote file unless file exists' do
           allow_any_instance_of(Pathname).to receive(:file?)
             .and_return(false)
@@ -146,14 +147,14 @@ describe 'postfix.rpm::default' do
         end # it
       end # describe
 
-      describe "#{sources}/postfix-2.11.0-config.patch" do
+      describe "#{sources}/postfix-1.2.3-config.patch" do
         it 'creates template with expected owner, group' do
           expect(chef_run).to create_template(subject)
             .with_owner('vagrant').with_group('vagrant')
         end # it
       end # describe
 
-      describe "#{sources}/postfix-2.11.0-files.patch" do
+      describe "#{sources}/postfix-1.2.3-files.patch" do
         it 'creates template with expected owner, group' do
           expect(chef_run).to create_template(subject)
             .with_owner('vagrant').with_group('vagrant')

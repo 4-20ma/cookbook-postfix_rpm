@@ -76,7 +76,7 @@ bash "chown #{rpmbuild}" do
   only_if { rpmbuild.directory? }
 end # bash
 
-#----------- remote_file[/home/vagrant/rpmbuild/SOURCES/postfix-2.11.0.tar.gz]
+#------------ remote_file[/home/vagrant/rpmbuild/SOURCES/postfix-x.y.z.tar.gz]
 remote_file src_filepath.to_s do
   source  'http://mirrors-usa.go-parts.com/postfix/source/official/' \
           "#{output}.tar.gz"
@@ -100,8 +100,8 @@ end # %w(...).each
 #------------------------------------------------------------------ template[]
 %w(
   SOURCES/pflogsumm-1.1.1-datecalc.patch
-  SOURCES/postfix-2.11.0-config.patch
-  SOURCES/postfix-2.11.0-files.patch
+  SOURCES/postfix-POSTFIX_VERSION-config.patch
+  SOURCES/postfix-POSTFIX_VERSION-files.patch
   SOURCES/postfix-alternatives.patch
   SOURCES/postfix-etc-init.d-postfix
   SOURCES/postfix-large-fs.patch
@@ -109,6 +109,7 @@ end # %w(...).each
   SOURCES/postfix-sasl.conf
   SOURCES/README-Postfix-SASL-RedHat.txt
 ).each do |name|
+  name.gsub!('POSTFIX_VERSION', node['postfix']['version'])
   template "#{rpmbuild}/#{name}" do |t|
     source  name
     user    'vagrant'
@@ -124,6 +125,7 @@ end # %w(...).each
     user    'vagrant'
     group   'vagrant'
     variables(
+      :version => node['postfix']['version'],
       :release => node['postfix']['release']
     )
   end # template

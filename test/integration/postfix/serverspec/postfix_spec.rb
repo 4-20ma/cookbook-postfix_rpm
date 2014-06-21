@@ -2,7 +2,7 @@
 require 'spec_helper'
 
 describe 'postfix.rpm::default' do
-  #---------------------------------------------------------------- locals
+  #-------------------------------------------------------------------- locals
   home = Pathname.new('/') + 'home' + 'vagrant'
   products = home + 'products'
   rpmbuild = home + 'rpmbuild'
@@ -189,7 +189,7 @@ describe 'postfix.rpm::default' do
     end # it
   end # describe
 
-  #--------- remote_file[/home/vagrant/rpmbuild/SOURCES/postfix-2.11.0.tar.gz]
+  #---------- remote_file[/home/vagrant/rpmbuild/SOURCES/postfix-x.y.z.tar.gz]
   describe file("/home/vagrant/rpmbuild/SOURCES/#{postfix_ver}.tar.gz") do
     it 'is a file' do
       expect(subject).to be_file
