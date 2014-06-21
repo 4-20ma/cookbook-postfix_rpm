@@ -35,7 +35,7 @@ suites:
       - 'recipe[postfix.rpm::default]'
     attributes:
       postfix:
-        version: '2.11.0'
+        version: '2.11.1'
         release: '0'
         pre_tidy: true
         post_tidy: false
