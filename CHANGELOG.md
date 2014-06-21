@@ -1,12 +1,12 @@
 0.3.0 / 2014-06-21
 ------------------
 
-- `IMPROVE` - Update postfix to v2.11.1 | [view](https://gitlab.com/4-20ma/cookbook-postfix.rpm/commit/adea1d9)
-- `IMPROVE` - Refactor hard-coded postfix versions | [view](https://gitlab.com/4-20ma/cookbook-postfix.rpm/commit/bdec964)
-- `IMPROVE` - Refactor to facilitate version updates | [view](https://gitlab.com/4-20ma/cookbook-postfix.rpm/commit/deb0e72)
-- `IMPROVE` - Update rubocop gem | [view](https://gitlab.com/4-20ma/cookbook-postfix.rpm/commit/131354c)
-- `NEW` - Update chefspec gem | [view](https://gitlab.com/4-20ma/cookbook-postfix.rpm/commit/f8683d5)
-- `NEW` - Update foodcritic gem | [view](https://gitlab.com/4-20ma/cookbook-postfix.rpm/commit/89d8411)
+- `IMPROVE` - Update postfix to v2.11.1 | [view](https://github.com/4-20ma/cookbook-postfix.rpm/commit/adea1d9)
+- `IMPROVE` - Refactor hard-coded postfix versions | [view](https://github.com/4-20ma/cookbook-postfix.rpm/commit/bdec964)
+- `IMPROVE` - Refactor to facilitate version updates | [view](https://github.com/4-20ma/cookbook-postfix.rpm/commit/deb0e72)
+- `IMPROVE` - Update rubocop gem | [view](https://github.com/4-20ma/cookbook-postfix.rpm/commit/131354c)
+- `NEW` - Update chefspec gem | [view](https://github.com/4-20ma/cookbook-postfix.rpm/commit/f8683d5)
+- `NEW` - Update foodcritic gem | [view](https://github.com/4-20ma/cookbook-postfix.rpm/commit/89d8411)
 
 
 0.2.0 / 2014-05-08
