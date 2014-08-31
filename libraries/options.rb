@@ -1,6 +1,6 @@
 # encoding: utf-8
 #
-# Cookbook Name:: postfix.rpm
+# Cookbook Name:: postfix_rpm
 # Library:: options
 #
 # Author:: Doc Walker (<4-20ma@wvfans.net>)

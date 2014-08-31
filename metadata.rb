@@ -1,5 +1,5 @@
 # encoding: utf-8
-name              'postfix.rpm'
+name              'postfix_rpm'
 maintainer        'Doc Walker'
 maintainer_email  '4-20ma@wvfans.net'
 description       'Creates rpm package for postfix.'
