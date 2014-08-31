@@ -32,7 +32,7 @@ suites:
   #------------------------------------------------------------ suite[postfix]
   - name: postfix
     run_list:
-      - 'recipe[postfix.rpm::default]'
+      - 'recipe[postfix_rpm::default]'
     attributes:
       postfix:
         version: '2.11.1'
