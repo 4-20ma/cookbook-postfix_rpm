@@ -1,3 +1,15 @@
+1.0.0 / 2014-08-31
+------------------
+
+- `BREAK` - Rename cookbook | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/0c16902)
+- `IMPROVE` - Update emeril gem | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/0115184)
+- `IMPROVE` - Update to ruby-2.1.2 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/3689b04)
+- `IMPROVE` - Update chefspec gem | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/6c5212b)
+- `IMPROVE` - Update rubocop gem | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/48752c3)
+- `IMPROVE` - Fix repo URIs to point to github.com | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/fe1c6bc)
+- `IMPROVE` - Update README with version update instructions | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/e5e3e54)
+
+
 0.3.0 / 2014-06-21
 ------------------
 
