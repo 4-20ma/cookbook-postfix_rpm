@@ -1,3 +1,9 @@
+1.0.2 / 2014-08-31
+------------------
+
+- `FIX` - Fix cookbook name in .kitchen.yml | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/f050406)
+
+
 1.0.1 / 2014-08-31
 ------------------
 
