@@ -1,3 +1,10 @@
+1.0.1 / 2014-08-31
+------------------
+
+- `IMPROVE` - Add rake changelog task | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/7e01740)
+- `FIX` - Remove debian/ubuntu support | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/c29af3e)
+
+
 1.0.0 / 2014-08-31
 ------------------
 
@@ -6,7 +13,7 @@
 - `IMPROVE` - Update to ruby-2.1.2 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/3689b04)
 - `IMPROVE` - Update chefspec gem | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/6c5212b)
 - `IMPROVE` - Update rubocop gem | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/48752c3)
-- `IMPROVE` - Fix repo URIs to point to github.com | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/fe1c6bc)
+- `FIX` - Fix repo URIs to point to github.com | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/fe1c6bc)
 - `IMPROVE` - Update README with version update instructions | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/e5e3e54)
 
 
