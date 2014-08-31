@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'spec_helper'
 
-describe 'postfix.rpm::default' do
+describe 'postfix_rpm::default' do
   [
     { :platform => 'centos', :version => '6.5' }
   ].each do |i|
