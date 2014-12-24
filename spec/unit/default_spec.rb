@@ -8,7 +8,7 @@ describe 'postfix_rpm::default' do
     context "#{i[:platform]}/#{i[:version]}" do
       # need to use let instead of cached so mocks will work properly (slower)
       let(:chef_run) do
-        ChefSpec::Runner.new(i) do |node|
+        ChefSpec::SoloRunner.new(i) do |node|
           # override cookbook attributes
           node.override['postfix']['version'] = '1.2.3'
           node.override['postfix']['pre_tidy'] = true
