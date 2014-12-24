@@ -1,7 +1,7 @@
 postfix_rpm Cookbook
 ====================
-[![Build Status](https://travis-ci.org/4-20ma/cookbook-postfix_rpm.png?branch=master)](https://travis-ci.org/4-20ma/cookbook-postfix_rpm)
-[![Dependency Status](https://gemnasium.com/4-20ma/cookbook-postfix_rpm.png)](https://gemnasium.com/4-20ma/cookbook-postfix_rpm)
+[![Travis](https://img.shields.io/travis/4-20ma/cookbook-postfix_rpm.svg?style=flat)](https://travis-ci.org/4-20ma/cookbook-postfix_rpm)
+[![Gemnasium](http://img.shields.io/gemnasium/4-20ma/cookbook-postfix_rpm.svg?style=flat)](https://gemnasium.com/4-20ma/cookbook-postfix_rpm)
 
 Creates rpm package for `postfix`. The primary use case for this cookbook is to leverage Test Kitchen to:
 
