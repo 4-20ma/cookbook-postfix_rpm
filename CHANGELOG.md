@@ -1,3 +1,21 @@
+1.0.3 / 2014-12-26
+------------------
+
+- `IMPROVE` - Add RELEASE document | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/e9ff980)
+- `FIX` - Fix rake knife task for travis-ci | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/92c1800)
+- `IMPROVE` - Update chefspec to v4.2.0 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/c29bbbd)
+- `IMPROVE` - Adjust style of README links | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/c332271)
+- `IMPROVE` - Add cookbook version badge to README | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/a769706)
+- `IMPROVE` - Update ruby to v2.1.5 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/a08469a)
+- `FIX` - Update rubocop config to allow style | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/9a76e0c)
+- `IMPROVE` - Update rubocop to v0.28.0 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/7c86b92)
+- `FIX` - Update deprecated method | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/e7cbfe4)
+- `IMPROVE` - Update chefspec to v4.1.1 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/2a82b4f)
+- `IMPROVE` - Update berkshelf to v3.2.2 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/0f1d28d)
+- `IMPROVE` - Update README to use shields.io badges | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/a99ef37)
+- `IMPROVE` - Update travis-ci to containers, caching | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/624e208)
+
+
 1.0.2 / 2014-08-31
 ------------------
 
