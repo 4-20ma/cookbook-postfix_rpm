@@ -1,8 +1,12 @@
 postfix_rpm Cookbook
 ====================
-+[![Chef cookbook](https://img.shields.io/cookbook/v/postfix_rpm.svg?style=flat)](https://supermarket.chef.io/cookbooks/postfix_rpm)
-[![Travis](https://img.shields.io/travis/4-20ma/cookbook-postfix_rpm.svg?style=flat)](https://travis-ci.org/4-20ma/cookbook-postfix_rpm)
-[![Gemnasium](http://img.shields.io/gemnasium/4-20ma/cookbook-postfix_rpm.svg?style=flat)](https://gemnasium.com/4-20ma/cookbook-postfix_rpm)
+[![Chef cookbook](https://img.shields.io/cookbook/v/postfix_rpm.svg?style=flat)][cookbook]
+[![Travis](https://img.shields.io/travis/4-20ma/cookbook-postfix_rpm.svg?style=flat)][travis]
+[![Gemnasium](http://img.shields.io/gemnasium/4-20ma/cookbook-postfix_rpm.svg?style=flat)][gemnasium]
+
+[cookbook]: https://supermarket.chef.io/cookbooks/postfix_rpm
+[travis]: https://travis-ci.org/4-20ma/cookbook-postfix_rpm
+[gemnasium]: https://gemnasium.com/4-20ma/cookbook-postfix_rpm
 
 Creates rpm package for `postfix`. The primary use case for this cookbook is to leverage Test Kitchen to:
 
