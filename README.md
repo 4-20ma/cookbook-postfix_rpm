@@ -1,5 +1,6 @@
 postfix_rpm Cookbook
 ====================
++[![Chef cookbook](https://img.shields.io/cookbook/v/postfix_rpm.svg?style=flat)](https://supermarket.chef.io/cookbooks/postfix_rpm)
 [![Travis](https://img.shields.io/travis/4-20ma/cookbook-postfix_rpm.svg?style=flat)](https://travis-ci.org/4-20ma/cookbook-postfix_rpm)
 [![Gemnasium](http://img.shields.io/gemnasium/4-20ma/cookbook-postfix_rpm.svg?style=flat)](https://gemnasium.com/4-20ma/cookbook-postfix_rpm)
 
