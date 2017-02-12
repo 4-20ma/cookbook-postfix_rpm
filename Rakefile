@@ -62,14 +62,18 @@ RSpec::Core::RakeTask.new(:unit) do |t|
 end # RSpec::Core::RakeTask
 
 #-------------------------------------------------- cookbook lint/style checks
-FoodCritic::Rake::LintTask.new do |t|
-  # exclude tags by using ~FC002 notation within :tags array
-  t.options = {
-    :fail_tags => %w(any),
-    :include_rules => ['spec/foodcritic'],
-    :tags => %w()
-  }
-end # FoodCritic::Rake::LintTask.new
+begin
+  FoodCritic::Rake::LintTask.new do |t|
+    # exclude tags by using ~FC002 notation within :tags array
+    t.options = {
+      :fail_tags => %w(any),
+      :include_rules => ['spec/foodcritic'],
+      :tags => %w()
+    }
+  end # FoodCritic::Rake::LintTask.new
+rescue LoadError, NameError
+  STDOUT.puts '[WARN] FoodCritic::Rake::LintTask not loaded'
+end
 
 namespace :foodcritic do
   desc 'Updates 3rd-party foodcritic rules.'
@@ -95,21 +99,18 @@ task :knife do
   sh 'bundle exec knife cookbook test --all --cookbook-path .'
 end # task
 
-#-------------------------------------------------------------- release/tagger
+#-------------------------------------------------------------- publish/tagger
+# Configure path to stove gem config file (add to ~/.bash_profile):
+# export STOVE_CONFIG=$HOME/.chef/stove.json
+
+# Update stove gem config file
+# $ stove login --username USERNAME --key ~/.chef/USERNAME.pem
+
 begin
-  require 'emeril/rake_tasks'
-  Emeril::RakeTasks.new do |t|
-    # turn on debug logging
-    t.config[:logger].level = :debug
-
-    # set a category for this cookbook
-    t.config[:category] = 'Package Management'
-
-    # explicitly indicate whether to publish to chef supermarket
-    t.config[:publish_to_supermarket] = true
-  end
-rescue LoadError
-  STDOUT.puts '[WARN] Emeril::RakeTasks not loaded'
+  require 'stove/rake_task'
+  Stove::RakeTask.new
+rescue LoadError, NameError
+  STDOUT.puts '[WARN] Stove::RakeTask not loaded'
 end
 
 #------------------------------------------------------ ruby lint/style checks
