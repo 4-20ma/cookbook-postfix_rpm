@@ -9,20 +9,33 @@ AllCops:
     - spec/foodcritic/**/*
     - vendor/**/*
 
-EmptyLines:
+#------------------------------------------------------------------------ lint
+Lint/UnusedBlockArgument:
   Enabled: false
 
-HashSyntax:
-  EnforcedStyle: hash_rockets
-
-SingleSpaceBeforeFirstArg:
-  Enabled: false
-
-UnusedBlockArgument:
-  Enabled: false
-
+#--------------------------------------------------------------------- metrics
 Metrics/AbcSize:
   Max: 19
 
+Metrics/BlockLength:
+  ExcludedMethods:
+    - context
+    - describe
+    - each
+    - tap
+
+#----------------------------------------------------------------------- style
+Style/EmptyLines:
+  Enabled: false
+
 Style/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+Style/HashSyntax:
+  EnforcedStyle: hash_rockets
+
+Style/SpaceBeforeFirstArg:
   Enabled: false
