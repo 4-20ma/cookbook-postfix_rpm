@@ -24,6 +24,10 @@ Metrics/BlockLength:
     - each
     - tap
 
+Metrics/LineLength:
+  Exclude:
+    - 'metadata.rb'
+
 #----------------------------------------------------------------------- style
 Style/EmptyLines:
   Enabled: false

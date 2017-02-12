@@ -6,6 +6,8 @@ description       'Creates rpm package for postfix.'
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 license           'Apache 2.0'
 version           '1.0.3'
+issues_url        'https://github.com/4-20ma/cookbook-postfix_rpm/issues' if respond_to?(:issues_url)
+source_url        'https://github.com/4-20ma/cookbook-postfix_rpm' if respond_to?(:source_url)
 
 #------------------------------------------------------- cookbook dependencies
 depends           'yum-epel', '~> 0.3.6'
