@@ -13,6 +13,6 @@ group :test do
 end # group
 
 group :integration do
-  gem 'kitchen-vagrant', '~> 0.15.0'
+  gem 'kitchen-vagrant', '~> 1.0.1'
   gem 'test-kitchen', '~> 1.15.0'
 end # group
