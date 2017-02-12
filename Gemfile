@@ -6,13 +6,13 @@ group :development do
 end # group
 
 group :test do
-  gem 'berkshelf', '~> 3.2.2'
-  gem 'chefspec', '~> 4.2.0'
+  gem 'berkshelf', '~> 5.6.2'
+  gem 'chefspec', '~> 5.4.0'
   gem 'foodcritic', '~> 9.0.0'
   gem 'rubocop', '~> 0.47.1'
 end # group
 
 group :integration do
   gem 'kitchen-vagrant', '~> 0.15.0'
-  gem 'test-kitchen', '~> 1.2.1'
+  gem 'test-kitchen', '~> 1.15.0'
 end # group
