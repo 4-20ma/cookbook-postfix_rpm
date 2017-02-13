@@ -67,6 +67,12 @@ describe 'postfix_rpm::default' do
     end # it
   end # describe
 
+  describe package('gcc') do
+    it 'installs described package' do
+      expect(subject).to be_installed
+    end # it
+  end # describe
+
   describe package('pkgconfig') do
     it 'installs described package' do
       expect(subject).to be_installed

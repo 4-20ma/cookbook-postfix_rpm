@@ -46,7 +46,7 @@ end # %w(...).each
 
 #------------------------------------------------------------------- package[]
 # packages required to build all rpms
-%w(automake pkgconfig rpm-build).each do |name|
+%w(automake gcc pkgconfig rpm-build).each do |name|
   package name
 end # %w(...).each
 

@@ -58,6 +58,12 @@ describe 'postfix_rpm::default' do
         end # it
       end # describe
 
+      describe 'gcc' do
+        it 'installs described package' do
+          expect(chef_run).to install_package(subject)
+        end # it
+      end # describe
+
       describe 'pkgconfig' do
         it 'installs described package' do
           expect(chef_run).to install_package(subject)
