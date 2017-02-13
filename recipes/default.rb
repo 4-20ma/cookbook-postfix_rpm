@@ -78,7 +78,7 @@ end # bash
 
 #------------ remote_file[/home/vagrant/rpmbuild/SOURCES/postfix-x.y.z.tar.gz]
 remote_file src_filepath.to_s do
-  source  'http://mirrors-usa.go-parts.com/postfix/source/official/' \
+  source  'ftp://ftp.porcupine.org/mirrors/postfix-release/official/' \
           "#{output}.tar.gz"
   backup  false
   user    'vagrant'
