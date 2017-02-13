@@ -33,10 +33,10 @@ Instructions for releasing this cookbook:
 
         $ git add . && git stash
 
-- Switch `knife.rb` configuration
+- Switch chef configuration
 
         $ chefvm use 0
 
-- Release cookbook
+- Publish cookbook
 
-        $ rake release
+        $ rake publish

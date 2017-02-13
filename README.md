@@ -121,10 +121,10 @@ Create a pull request and merge once travis-ci tests pass.
 
 Update `CHANGELOG`, bump version in `metadata.rb`, stage & commit the changes, and push the branch (OK to add [skip ci] to commit message to skip travis-ci).
 
-Release the updated cookbook (stash any uncommitted changes before releasing).
+Publish the updated cookbook (stash any uncommitted changes before publishing).
 
 ````bash
-$ bundle exec rake release
+$ bundle exec rake publish
 ````
 
 
