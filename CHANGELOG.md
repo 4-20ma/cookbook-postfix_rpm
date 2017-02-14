@@ -1,3 +1,12 @@
+1.2.0 / 2017-02-14
+------------------
+
+- `IMPROVE` - Update to postfix-2.11.9 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/ec0a578)
+- `IMPROVE` - Update yum-epel cookbook to v2.1.1 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/d405e3d)
+- `IMPROVE` - Update TODO | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/c818317)
+- `IMPROVE` - Update kitchen-vagrant to v1.0.2 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/c669fa2)
+
+
 1.1.0 / 2017-02-13
 ------------------
 
