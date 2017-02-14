@@ -1,3 +1,26 @@
+1.1.0 / 2017-02-13
+------------------
+
+- `IMPROVE` - Update TODO | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/c14b45c)
+- `IMPROVE` - Update copyrights | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/b9dd61b)
+- `FIX` - Remove deprecated include statement | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/898f849)
+- `IMPROVE` - Add TODO | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/0fce3f7)
+- `IMPROVE` - Change release to publish | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/ea60b58)
+- `FIX` - Update postfix source url | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/c23e3fc)
+- `FIX` - Add missing gcc package | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/7e26726)
+- `FIX` - Revert kitchen-vagrant to 0.21.1 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/9ffeb89)
+- `IMPROVE` - Update kitchen-vagrant gem to v1.0.1 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/90f0dc0)
+- `IMPROVE` - Update berkshelf, chefspec, test-kitchen gems | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/3251732)
+- `IMPROVE` - Update foodcritic gem to v9.0.0 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/fe8fb5e)
+- `FIX` - Fix cop | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/79b6a48)
+- `IMPROVE` - Update rubocop gem to v0.47.1 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/90da42f)
+- `IMPROVE` - Replace emeril with stove | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/c81c09f)
+- `IMPROVE` - Add Gemfile.lock to repo | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/9cb58b7)
+- `IMPROVE` - Update project to ruby-2.3.1 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/669e5af)
+- `IMPROVE` - Update README link layout | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/ec2109c)
+- `IMPROVE` - Update ruby to v2.2.0 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/9dd3b55)
+
+
 1.0.3 / 2014-12-26
 ------------------
 
