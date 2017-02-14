@@ -71,8 +71,7 @@ Source101: postfix-pam.conf
 
 # Patches
 
-Patch1: postfix-2.11.1-config.patch
-Patch2: postfix-2.11.1-files.patch
+Patch2: postfix-<%= @version %>-files.patch
 Patch3: postfix-alternatives.patch
 Patch8: postfix-large-fs.patch
 Patch9: pflogsumm-1.1.1-datecalc.patch
@@ -157,7 +156,6 @@ qshape prints Postfix queue domain and age distribution.
 %prep
 %setup -q
 # Apply obligatory patches
-%patch1 -p1 -b .config
 %patch2 -p1 -b .files
 %patch3 -p1 -b .alternatives
 %patch8 -p1 -b .large-fs
@@ -501,6 +499,9 @@ rm -rf $RPM_BUILD_ROOT
 %endif
 
 %changelog
+* Tue Feb 14 2017 Doc Walker <4-20ma@wvfans.net> - 1:2.11.9-0
+- Update to postfix-2.11.9
+
 * Sat Jun 21 2014 Doc Walker <4-20ma@wvfans.net> - 1:2.11.1-0
 - Update to postfix-2.11.1
 

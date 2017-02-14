@@ -153,13 +153,6 @@ describe 'postfix_rpm::default' do
         end # it
       end # describe
 
-      describe "#{sources}/postfix-1.2.3-config.patch" do
-        it 'creates template with expected owner, group' do
-          expect(chef_run).to create_template(subject)
-            .with_owner('vagrant').with_group('vagrant')
-        end # it
-      end # describe
-
       describe "#{sources}/postfix-1.2.3-files.patch" do
         it 'creates template with expected owner, group' do
           expect(chef_run).to create_template(subject)

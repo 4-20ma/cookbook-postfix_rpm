@@ -100,7 +100,6 @@ end # %w(...).each
 #------------------------------------------------------------------ template[]
 %w(
   SOURCES/pflogsumm-1.1.1-datecalc.patch
-  SOURCES/postfix-POSTFIX_VERSION-config.patch
   SOURCES/postfix-POSTFIX_VERSION-files.patch
   SOURCES/postfix-alternatives.patch
   SOURCES/postfix-etc-init.d-postfix

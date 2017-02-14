@@ -88,8 +88,6 @@ File / Section(s)            | Description
 `postfix-x.y.z-files.patch`  | rename to match postfix version; update patch, if necessary
 &nbsp;                       | &nbsp;
 [postfix.spec.erb](templates/default/SPECS/postfix.spec.erb)|
-`Patch1`                     | update patch filename to match postfix version
-`Patch2`                     | update patch filename to match postfix version
 `%changelog`                 | update changelog with pertinent information
 &nbsp;                       | &nbsp;
 [postfix_spec.rb](test/integration/postfix/serverspec/postfix_spec.rb)|
