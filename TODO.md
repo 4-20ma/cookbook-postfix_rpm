@@ -2,7 +2,6 @@
 
 Update gem versions
 
-  - Figure out why kitchen-vagrant v1.0.0, v1.0.1 fail
 
 Improvements
 
