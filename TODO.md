@@ -6,7 +6,6 @@ Update gem versions
 
 Improvements
 
-  - update copyrights
   - Use github_changelog_generator
 
 Fix deprecations

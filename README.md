@@ -148,7 +148,7 @@ License & Authors
 - Author:: Doc Walker (<4-20ma@wvfans.net>)
 
 ````text
-Copyright 2014, Doc Walker
+Copyright 2014-2017, Doc Walker
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
