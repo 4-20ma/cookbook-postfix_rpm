@@ -10,7 +10,7 @@ issues_url        'https://github.com/4-20ma/cookbook-postfix_rpm/issues' if res
 source_url        'https://github.com/4-20ma/cookbook-postfix_rpm' if respond_to?(:source_url)
 
 #------------------------------------------------------- cookbook dependencies
-depends           'yum-epel', '~> 0.3.6'
+depends           'yum-epel', '~> 2.1.1'
 
 #--------------------------------------------------------- supported platforms
 # tested
