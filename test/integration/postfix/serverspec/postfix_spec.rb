@@ -9,7 +9,7 @@ describe 'postfix_rpm::default' do
   rpms = rpmbuild + 'RPMS'
   sources = rpmbuild + 'SOURCES'
   specs = rpmbuild + 'SPECS'
-  postfix_ver = 'postfix-2.11.1'
+  postfix_ver = 'postfix-2.11.9'
   pflogsumm_ver = 'pflogsumm-1.1.1'
   release = '0'
 
@@ -235,24 +235,6 @@ describe 'postfix_rpm::default' do
 
   #---------------------------------------------------------------- template[]
   describe file("#{sources}/#{pflogsumm_ver}-datecalc.patch") do
-    it 'is a file' do
-      expect(subject).to be_file
-    end # it
-
-    it 'is owned by vagrant' do
-      expect(subject).to be_owned_by('vagrant')
-    end # it
-
-    it 'is in group vagrant' do
-      expect(subject).to be_grouped_into('vagrant')
-    end # it
-
-    it 'is mode 644' do
-      expect(subject).to be_mode(644)
-    end # it
-  end # describe
-
-  describe file("#{sources}/#{postfix_ver}-config.patch") do
     it 'is a file' do
       expect(subject).to be_file
     end # it
