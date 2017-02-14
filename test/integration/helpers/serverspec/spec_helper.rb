@@ -2,8 +2,7 @@
 require 'serverspec'
 require 'platform_helpers'
 
-include Serverspec::Helper::Exec
-include Serverspec::Helper::DetectOS
+set :backend, :exec
 
 RSpec.configure do |config|
   config.expect_with :rspec do |c|
