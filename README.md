@@ -84,8 +84,7 @@ File / Section(s)            | Description
 `attributes/postfix/release` | reset to 0 for new postfix version (increment if new rpm release of same postfix version)
 &nbsp;                       | &nbsp;
 [SOURCES](templates/default/SOURCES)|
-`postfix-x.y.z-config.patch` | rename to match postfix version; update patch, if necessary
-`postfix-x.y.z-files.patch`  | rename to match postfix version; update patch, if necessary
+`postfix-x.y.z-files.patch`  | create to match postfix version; update patch, if necessary
 &nbsp;                       | &nbsp;
 [postfix.spec.erb](templates/default/SPECS/postfix.spec.erb)|
 `%changelog`                 | update changelog with pertinent information

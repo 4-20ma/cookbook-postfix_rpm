@@ -277,9 +277,9 @@ done
 ## RPM compresses man pages automatically.
 ## - Edit postfix-files to reflect this, so post-install won't get confused
 ##   when called during package installation.
-sed -i -r "s#(/man[158]/.*.[158]):f#\1.gz:f#" $RPM_BUILD_ROOT%{postfix_daemon_dir}/postfix-files
+sed -i -r "s#(/man[158]/.*.[158]):f#\1.gz:f#" $RPM_BUILD_ROOT%{postfix_config_dir}/postfix-files
 
-cat $RPM_BUILD_ROOT%{postfix_daemon_dir}/postfix-files
+cat $RPM_BUILD_ROOT%{postfix_config_dir}/postfix-files
 %if %{SASL}
 # Install the smtpd.conf file for SASL support.
 mkdir -p $RPM_BUILD_ROOT%{sasl_config_dir}
@@ -467,17 +467,15 @@ rm -rf $RPM_BUILD_ROOT
 %attr(0644, root, root) %config(noreplace) %{postfix_config_dir}/header_checks
 %attr(0644, root, root) %config(noreplace) %{postfix_config_dir}/main.cf
 %attr(0644, root, root) %config(noreplace) %{postfix_config_dir}/master.cf
+%attr(0644, root, root) %{postfix_config_dir}/postfix-files
 %attr(0644, root, root) %config(noreplace) %{postfix_config_dir}/relocated
 %attr(0644, root, root) %config(noreplace) %{postfix_config_dir}/transport
 %attr(0644, root, root) %config(noreplace) %{postfix_config_dir}/virtual
 %attr(0755, root, root) %{postfix_daemon_dir}/[^mp]*
-%attr(0644, root, root) %{postfix_daemon_dir}/main.cf
-%attr(0644, root, root) %{postfix_daemon_dir}/master.cf
 %attr(0755, root, root) %{postfix_daemon_dir}/master
 %attr(0755, root, root) %{postfix_daemon_dir}/pickup
 %attr(0755, root, root) %{postfix_daemon_dir}/pipe
 %attr(0755, root, root) %{postfix_daemon_dir}/post-install
-%attr(0644, root, root) %{postfix_daemon_dir}/postfix-files
 %attr(0755, root, root) %{postfix_daemon_dir}/postfix-script
 %attr(0755, root, root) %{postfix_daemon_dir}/postfix-wrapper
 %attr(0755, root, root) %{postfix_daemon_dir}/postmulti-script
@@ -499,6 +497,9 @@ rm -rf $RPM_BUILD_ROOT
 %endif
 
 %changelog
+* Tue Feb 14 2017 Doc Walker <4-20ma@wvfans.net> - 1:3.0.8-0
+- Update to postfix-3.0.8
+
 * Tue Feb 14 2017 Doc Walker <4-20ma@wvfans.net> - 1:2.11.9-0
 - Update to postfix-2.11.9
 
