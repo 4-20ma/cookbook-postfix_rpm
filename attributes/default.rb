@@ -21,6 +21,7 @@ default['postfix'].tap do |postfix|
     options['pgsql']      = false
     options['sasl']       = true
     options['sqlite']     = true
+    options['smtputf8']   = false
     options['tls']        = true
 
     # add required development packages based on chosen options
@@ -30,6 +31,7 @@ default['postfix'].tap do |postfix|
     postfix['devel_packages'] << 'postgresql' if options['pgsql']
     postfix['devel_packages'] << 'cyrus-sasl' if options['sasl']
     postfix['devel_packages'] << 'sqlite' if options['sqlite']
+    postfix['devel_packages'] << 'libicu' if options['smtputf8']
     postfix['devel_packages'] << 'openssl' if options['tls']
   end # postfix[].tap
 end # default[].tap
