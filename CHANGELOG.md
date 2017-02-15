@@ -1,3 +1,9 @@
+2.0.0 / 2017-02-14
+------------------
+
+- `NEW` - Update to postfix-3.0.8 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/167b334)
+
+
 1.2.0 / 2017-02-14
 ------------------
 
