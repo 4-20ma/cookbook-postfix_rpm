@@ -117,14 +117,7 @@ $ git push --set-upstream origin branch_name
 
 Create a pull request and merge once travis-ci tests pass.
 
-Update `CHANGELOG`, bump version in `metadata.rb`, stage & commit the changes, and push the branch (OK to add [skip ci] to commit message to skip travis-ci).
-
-Publish the updated cookbook (stash any uncommitted changes before publishing).
-
-````bash
-$ bundle exec rake publish
-````
-
+Follow instructions in [PUBLISH](PUBLISH.md) to publish cookbook to Chef Supermarket.
 
 Usage
 -----
