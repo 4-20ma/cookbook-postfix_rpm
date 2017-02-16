@@ -60,6 +60,7 @@ Options                                   |
 `node['postfix']['options']['pgsql]`      | set this to true to enable PostgreSQL
 `node['postfix']['options']['sasl]`       | set this to true to enable Cyrus-SASL
 `node['postfix']['options']['sqlite]`     | set this to true to enable SQLite
+`node['postfix']['options']['smtputf8']`  | set this to true to enable SMTPUTF8 (requires libicu > 46)
 `node['postfix']['options']['tls]`        | set this to true to enable TLS
 
 
