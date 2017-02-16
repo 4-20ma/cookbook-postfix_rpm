@@ -1,10 +1,12 @@
 postfix_rpm Cookbook
 ====================
 [![Chef cookbook](https://img.shields.io/cookbook/v/postfix_rpm.svg?style=flat)][cookbook]
+[![RPM](https://img.shields.io/badge/rpm-postfix--3.1.4--0.el6.x86__64.rpm-blue.svg)][rpm]
 [![Travis](https://img.shields.io/travis/4-20ma/cookbook-postfix_rpm.svg?style=flat)][travis]
 [![Gemnasium](http://img.shields.io/gemnasium/4-20ma/cookbook-postfix_rpm.svg?style=flat)][gemnasium]
 
 [cookbook]:   https://supermarket.chef.io/cookbooks/postfix_rpm
+[rpm]:        ftp://ftp.porcupine.org/mirrors/postfix-release/official/postfix-3.1.4.RELEASE_NOTES
 [travis]:     https://travis-ci.org/4-20ma/cookbook-postfix_rpm
 [gemnasium]:  https://gemnasium.com/4-20ma/cookbook-postfix_rpm
 
@@ -93,6 +95,10 @@ File / Section(s)            | Description
 [postfix_spec.rb](test/integration/postfix/serverspec/postfix_spec.rb)|
 `postfix_ver`                | update to match postfix version
 `release`                    | update to match release
+&nbsp;                       | &nbsp;
+[README.md](README.md)|
+`[RPM]` badge                | update to match postfix version
+`[rpm]` link                 | update to match postfix version
 
 Run `rake` to ensure syntax, lint, and unit tests pass.
 
