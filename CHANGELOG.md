@@ -1,3 +1,14 @@
+2.1.1 / 2017-02-16
+------------------
+
+- `FIX` - Replace ftp link with http | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/9254ed9)
+- `IMPROVE` - Add rpm badge to README | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/d030b2d)
+- `IMPROVE` - Refactor README to refer to PUBLISH | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/cbea57e)
+- `IMPROVE` - Rename RELEASE.md to PUBLISH.md | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/ff37f67)
+- `IMPROVE` - Use publish instead of release | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/6f7ca66)
+- `IMPROVE` - Add git push to sync remote repo before publish | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/5b78e2d)
+
+
 2.1.0 / 2017-02-15
 ------------------
 
