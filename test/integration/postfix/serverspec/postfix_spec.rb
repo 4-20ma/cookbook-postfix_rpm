@@ -9,7 +9,7 @@ describe 'postfix_rpm::default' do
   rpms = rpmbuild + 'RPMS'
   sources = rpmbuild + 'SOURCES'
   specs = rpmbuild + 'SPECS'
-  postfix_ver = 'postfix-3.0.8'
+  postfix_ver = 'postfix-3.1.4'
   pflogsumm_ver = 'pflogsumm-1.1.1'
   release = '0'
 
