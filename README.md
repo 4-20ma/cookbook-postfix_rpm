@@ -6,7 +6,7 @@ postfix_rpm Cookbook
 [![Gemnasium](http://img.shields.io/gemnasium/4-20ma/cookbook-postfix_rpm.svg?style=flat)][gemnasium]
 
 [cookbook]:   https://supermarket.chef.io/cookbooks/postfix_rpm
-[rpm]:        ftp://ftp.porcupine.org/mirrors/postfix-release/official/postfix-3.1.4.RELEASE_NOTES
+[rpm]:        http://cdn.postfix.johnriley.me/mirrors/postfix-release/official/postfix-3.1.4.RELEASE_NOTES
 [travis]:     https://travis-ci.org/4-20ma/cookbook-postfix_rpm
 [gemnasium]:  https://gemnasium.com/4-20ma/cookbook-postfix_rpm
 
