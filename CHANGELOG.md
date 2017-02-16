@@ -1,3 +1,9 @@
+2.1.0 / 2017-02-15
+------------------
+
+- `IMPROVE` - Update to postfix-3.1.4 | [view](https://github.com/4-20ma/cookbook-postfix_rpm/commit/62534c8)
+
+
 2.0.0 / 2017-02-14
 ------------------
 
