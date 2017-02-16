@@ -1,4 +1,4 @@
-Instructions for releasing this cookbook:
+Instructions for publishing this cookbook to the Chef Supermarket:
 
 - Update `metadata.rb` with new cookbook version
 
