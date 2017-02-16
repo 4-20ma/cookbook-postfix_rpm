@@ -28,6 +28,7 @@ Instructions for releasing this cookbook:
 
         $ git add metadata.rb CHANGELOG.md
         $ git commit -m 'Update changelog, bump version'
+        $ git push
 
 - Ensure working directory is clean; add/stash changes, if necessary
 
