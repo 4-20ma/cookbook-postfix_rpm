@@ -159,7 +159,7 @@ begin
       'Type: Maintenance'
     ]
     # config.since_tag = '0.1.0'
-    config.future_release = "v#{Version.current.to_s}"
+    config.future_release = "v#{Version.current}"
     config.user = '4-20ma'
     config.project = 'cookbook-postfix_rpm'
   end # GitHubChangelogGenerator::RakeTask.new
