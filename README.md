@@ -1,5 +1,4 @@
-postfix_rpm Cookbook
-====================
+# postfix_rpm Cookbook
 [![Chef cookbook](https://img.shields.io/cookbook/v/postfix_rpm.svg?style=flat)][cookbook]
 [![RPM](https://img.shields.io/badge/rpm-postfix--3.1.4--0.el6.x86__64.rpm-blue.svg)][rpm]
 [![Travis](https://img.shields.io/travis/4-20ma/cookbook-postfix_rpm.svg?style=flat)][travis]
@@ -13,6 +12,9 @@ postfix_rpm Cookbook
 [gemnasium]:        https://gemnasium.com/4-20ma/cookbook-postfix_rpm
 [license]:          LICENSE
 [code of conduct]:  CODE_OF_CONDUCT.md
+
+
+## Overview
 
 Creates rpm package for `postfix`. The primary use case for this cookbook is to leverage Test Kitchen to:
 
@@ -29,8 +31,8 @@ The newly-created RPM will be located at:
 ````
 
 
-Requirements
-------------
+## Requirements
+
 ### Cookbooks
 The following cookbook is a dependency because it's used for optional functionality.
 
@@ -44,8 +46,7 @@ The following platform is supported and tested under Test Kitchen:
 Other RHEL family distributions are assumed to work.
 
 
-Attributes
-----------
+## Attributes
 
 File / Attribute(s)                       | Description
 ------------------------------------------|------------
@@ -70,8 +71,8 @@ Options                                   |
 `node['postfix']['options']['tls]`        | set this to true to enable TLS
 
 
-Recipes
--------
+## Recipes
+
 This cookbook provides one main recipe for building a binary RPM and an optional recipe for downloading a source RPM.
 
 Name                            | Description
@@ -80,8 +81,8 @@ Name                            | Description
 [`source`](recipes/source.rb)   | use this recipe to download a source RPM (optional--for RPM development)
 
 
-Update
-------
+## Update
+
 To update to a new version of `postfix`, do the following:
 
 File / Section(s)            | Description
@@ -129,8 +130,9 @@ Create a pull request and merge once travis-ci tests pass.
 
 Follow instructions in [PUBLISH](PUBLISH.md) to publish cookbook to Chef Supermarket.
 
-Usage
------
+
+## Usage
+
 Use Test Kitchen to converge the node and retrieve the resultant RPM from `.products/`.
 
 ````bash
@@ -144,12 +146,12 @@ $ bundle exec kitchen test
 ````
 
 
-License & Authors
------------------
+## License & Authors
+
 - Author:: Doc Walker (<4-20ma@wvfans.net>)
 
 ````text
-Copyright 2014-2017, Doc Walker
+Copyright 2014-2017 Doc Walker
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
