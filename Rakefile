@@ -137,3 +137,32 @@ rescue ScriptError, StandardError => e
   source = "from tasks/#{File.basename(__FILE__)}"
   STDOUT.puts "[WARN] #{e} (#{source})"
 end
+
+#------------------------------------------------------------------- changelog
+begin
+  require 'github_changelog_generator/task'
+
+  desc 'Prepare CHANGELOG'
+  GitHubChangelogGenerator::RakeTask.new(:changelog) do |config|
+    config.add_issues_wo_labels = false
+    config.add_pr_wo_labels = false
+    config.enhancement_labels = [
+      'Type: Enhancement'
+    ]
+    config.bug_labels = ['Type: Bug']
+    config.exclude_labels = ['Type: Question']
+    config.header = '# CHANGELOG'
+    config.include_labels = [
+      'Type: Bug',
+      'Type: Enhancement',
+      'Type: Feature Request',
+      'Type: Maintenance'
+    ]
+    # config.since_tag = '0.1.0'
+    config.future_release = "v#{Version.current}"
+    config.user = '4-20ma'
+    config.project = 'cookbook-postfix_rpm'
+  end # GitHubChangelogGenerator::RakeTask.new
+rescue LoadError, NameError
+  STDOUT.puts '[WARN] GitHubChangelogGenerator::RakeTask not loaded'
+end
