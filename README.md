@@ -4,11 +4,13 @@ postfix_rpm Cookbook
 [![RPM](https://img.shields.io/badge/rpm-postfix--3.1.4--0.el6.x86__64.rpm-blue.svg)][rpm]
 [![Travis](https://img.shields.io/travis/4-20ma/cookbook-postfix_rpm.svg?style=flat)][travis]
 [![Gemnasium](http://img.shields.io/gemnasium/4-20ma/cookbook-postfix_rpm.svg?style=flat)][gemnasium]
+[![license](https://img.shields.io/github/license/4-20ma/cookbook-postfix_rpm.svg?maxAge=3600)][license]
 
 [cookbook]:   https://supermarket.chef.io/cookbooks/postfix_rpm
 [rpm]:        http://cdn.postfix.johnriley.me/mirrors/postfix-release/official/postfix-3.1.4.RELEASE_NOTES
 [travis]:     https://travis-ci.org/4-20ma/cookbook-postfix_rpm
 [gemnasium]:  https://gemnasium.com/4-20ma/cookbook-postfix_rpm
+[license]:    LICENSE
 
 Creates rpm package for `postfix`. The primary use case for this cookbook is to leverage Test Kitchen to:
 
