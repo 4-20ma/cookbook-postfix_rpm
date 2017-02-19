@@ -5,12 +5,14 @@ postfix_rpm Cookbook
 [![Travis](https://img.shields.io/travis/4-20ma/cookbook-postfix_rpm.svg?style=flat)][travis]
 [![Gemnasium](http://img.shields.io/gemnasium/4-20ma/cookbook-postfix_rpm.svg?style=flat)][gemnasium]
 [![license](https://img.shields.io/github/license/4-20ma/cookbook-postfix_rpm.svg?maxAge=3600)][license]
+[![code of conduct](https://img.shields.io/badge/%E2%9D%A4-code%20of%20conduct-blue.svg?maxAge=3600)][code of conduct]
 
-[cookbook]:   https://supermarket.chef.io/cookbooks/postfix_rpm
-[rpm]:        http://cdn.postfix.johnriley.me/mirrors/postfix-release/official/postfix-3.1.4.RELEASE_NOTES
-[travis]:     https://travis-ci.org/4-20ma/cookbook-postfix_rpm
-[gemnasium]:  https://gemnasium.com/4-20ma/cookbook-postfix_rpm
-[license]:    LICENSE
+[cookbook]:         https://supermarket.chef.io/cookbooks/postfix_rpm
+[rpm]:              http://cdn.postfix.johnriley.me/mirrors/postfix-release/official/postfix-3.1.4.RELEASE_NOTES
+[travis]:           https://travis-ci.org/4-20ma/cookbook-postfix_rpm
+[gemnasium]:        https://gemnasium.com/4-20ma/cookbook-postfix_rpm
+[license]:          LICENSE
+[code of conduct]:  CODE_OF_CONDUCT.md
 
 Creates rpm package for `postfix`. The primary use case for this cookbook is to leverage Test Kitchen to:
 
