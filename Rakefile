@@ -113,3 +113,27 @@ task :rubocop do
     # t.fail_on_error = true
   end
 end # task
+
+#--------------------------------------------------------------------- version
+# Assume current version is 1.0.0:
+# $ rake version                      # print the current version number
+# $ rake version:bump                 # bump to 1.0.1
+# $ rake version:bump:major           # bump to 2.0.0
+# $ rake version:bump:minor           # bump to 1.1.0
+# $ rake version:bump:pre             # bump to 1.0.1a
+# $ rake version:bump:pre:major       # bump to 2.0.0a
+# $ rake version:bump:pre:minor       # bump to 1.1.0a
+# $ rake version:bump:pre:revision    # bump to 1.0.1a
+# $ rake version:bump:revision        # bump to 1.0.1
+# $ rake version:create               # creates a version file
+
+begin
+  require 'rake/version_task'
+  Rake::VersionTask.new do |t|
+    t.with_git = false
+    t.with_git_tag = false
+  end # Rake::VersionTask
+rescue ScriptError, StandardError => e
+  source = "from tasks/#{File.basename(__FILE__)}"
+  STDOUT.puts "[WARN] #{e} (#{source})"
+end

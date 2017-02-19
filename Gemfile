@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 group :development do
   gem 'stove', '~> 4.1.1'
+  gem 'version', '~> 1.0.0'
 end # group
 
 group :test do
