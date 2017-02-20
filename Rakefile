@@ -19,29 +19,6 @@ task :build_ci do
   Rake::Task[:unit].invoke
 end # task
 
-#------------------------------------------------------------------- changelog
-# TODO: improve the following:
-# - remove bump version commits
-# - prepend to CHANGELOG without using changelog.tmp
-desc 'Updates changelog with commit messages'
-task :changelog, [:tag1, :tag2] do |t, args|
-  args.with_defaults(:tag1 => 'v0.1.0', :tag2 => 'HEAD')
-  date = `git log -1 --format=%ad #{args[:tag2]} --date=short`
-  title = %(#{args[:tag2].gsub(/^v/, '')} / #{date}).chomp
-  underline = '-' * title.size
-  url = 'https://github.com/4-20ma'
-  format = %(- "'`'"TYPE"'`'" - %s | [view](#{url}/$basename/commit/%h))
-  file = 'changelog.tmp'
-  sh <<-EOF
-    remote=$(git config --get branch.master.remote)
-    url=$(git config --get remote.$remote.url)
-    basename=$(basename "$url" .git)
-    echo "#{title}\n#{underline}\n" > #{file}
-    git log #{args[:tag1]}..#{args[:tag2]} --no-merges \
-      --pretty=format:"#{format}" >> #{file}
-  EOF
-end # task
-
 #------------------------------------------------------------------ unit tests
 task :chefspec => [:unit]
 RSpec::Core::RakeTask.new(:unit) do |t|
@@ -99,12 +76,40 @@ end
 # Update stove gem config file
 # $ stove login --username USERNAME --key ~/.chef/USERNAME.pem
 
-begin
-  require 'stove/rake_task'
-  Stove::RakeTask.new
-rescue LoadError, NameError
-  STDOUT.puts '[WARN] Stove::RakeTask not loaded'
-end
+desc 'Tag and publish to Chef supermarket'
+task :publish => %w(publish:default)
+
+namespace :publish do
+  task :default => ['publish:tag', 'publish:supermarket']
+
+  begin
+    require 'version'
+    desc "Tag deployment as 'v#{Version.current}'"
+    task :tag do
+      tag_name = "v#{Version.current}"
+      puts "Tagging deployment as '#{tag_name}'"
+      `git add #{Version.version_file('').basename}`
+      puts `git commit -m 'Version bump to #{tag_name}'`
+      `git tag -a -f -m 'Version #{tag_name}' #{tag_name}`
+      `git push origin master`
+      `git push --tags`
+    end # task
+  rescue ScriptError, StandardError => e
+    source = "from tasks/#{File.basename(__FILE__)}"
+    STDOUT.puts "[WARN] #{e} (#{source})"
+  end
+
+  begin
+    require 'stove/rake_task'
+    Stove::RakeTask.new(:supermarket) do |t|
+      t.stove_opts = [].tap do |a|
+        a.push('--no-git')
+      end # t.stove_opts
+    end # Stove::RakeTask.new
+  rescue LoadError, NameError
+    STDOUT.puts '[WARN] Stove::RakeTask not loaded'
+  end
+end # namespace
 
 #------------------------------------------------------ ruby lint/style checks
 desc 'Runs rubocop lint tool against the cookbook.'
@@ -141,6 +146,7 @@ end
 #------------------------------------------------------------------- changelog
 begin
   require 'github_changelog_generator/task'
+  require 'version'
 
   desc 'Prepare CHANGELOG'
   GitHubChangelogGenerator::RakeTask.new(:changelog) do |config|
