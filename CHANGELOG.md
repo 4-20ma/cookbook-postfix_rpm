@@ -7,6 +7,10 @@
 
 - Split Rakefile tasks into separate tasks [\#95](https://github.com/4-20ma/cookbook-postfix_rpm/pull/95) ([4-20ma](https://github.com/4-20ma))
 
+**Fixed bugs:**
+
+- Fix rainbow lightgray color [\#97](https://github.com/4-20ma/cookbook-postfix_rpm/pull/97) ([4-20ma](https://github.com/4-20ma))
+
 **Merged pull requests:**
 
 - Update PUBLISH document [\#96](https://github.com/4-20ma/cookbook-postfix_rpm/pull/96) ([4-20ma](https://github.com/4-20ma))
