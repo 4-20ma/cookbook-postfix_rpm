@@ -1,6 +1,18 @@
 # CHANGELOG
 
-## [v2.2.1](https://github.com/4-20ma/cookbook-postfix_rpm/tree/v2.2.1) (2017-02-19)
+## [v2.3.0](https://github.com/4-20ma/cookbook-postfix_rpm/tree/v2.3.0) (2017-02-20)
+[Full Changelog](https://github.com/4-20ma/cookbook-postfix_rpm/compare/v2.2.1...v2.3.0)
+
+**Implemented enhancements:**
+
+- Split Rakefile tasks into separate tasks [\#95](https://github.com/4-20ma/cookbook-postfix_rpm/pull/95) ([4-20ma](https://github.com/4-20ma))
+
+**Merged pull requests:**
+
+- Update PUBLISH document [\#96](https://github.com/4-20ma/cookbook-postfix_rpm/pull/96) ([4-20ma](https://github.com/4-20ma))
+- Update CONTRIBUTING w/labels, uniform formatting [\#94](https://github.com/4-20ma/cookbook-postfix_rpm/pull/94) ([4-20ma](https://github.com/4-20ma))
+
+## [v2.2.1](https://github.com/4-20ma/cookbook-postfix_rpm/tree/v2.2.1) (2017-02-20)
 [Full Changelog](https://github.com/4-20ma/cookbook-postfix_rpm/compare/v2.2.0...v2.2.1)
 
 **Merged pull requests:**
