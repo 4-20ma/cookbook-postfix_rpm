@@ -61,7 +61,7 @@ namespace :publish do
       puts Rainbow("Tagging deployment as '#{tag_name}'").cyan
       `git add CHANGELOG.md`
       `git add #{Version.version_file('').basename}`
-      puts Rainbow(`git commit -m 'Version bump to #{tag_name}'`).light_grey
+      puts Rainbow(`git commit -m 'Version bump to #{tag_name}'`).lightgray
       `git tag -a -f -m 'Version #{tag_name}' #{tag_name}`
       `git push origin master`
       `git push --tags`
