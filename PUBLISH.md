@@ -1,3 +1,5 @@
+# PUBLISH
+
 Instructions for publishing this cookbook to the Chef Supermarket:
 
 - Update `metadata.rb` with new cookbook version
@@ -34,10 +36,33 @@ Instructions for publishing this cookbook to the Chef Supermarket:
 
         $ git add . && git stash
 
-- Switch chef configuration
+- Select appropriate chef environment
 
-        $ chefvm use 0
+        $ chefvm use chef.io
 
 - Publish cookbook
 
         $ rake publish
+
+
+## Config reference
+
+Chef environment manager `chefvm` is used.
+
+`~/.bash_profile`
+
+    ...
+    # configure stove gem to use chefvm path
+    export STOVE_CONFIG=$HOME/.chef/stove.json
+    ...
+
+`~/.chef/stove.json`
+
+    {"username":"USERNAME","key":"/PATH/TO/.chef/USERNAME.pem"}
+
+
+`~/.chef/USERNAME.pem`
+
+    -----BEGIN RSA PRIVATE KEY-----
+    ...
+    -----END RSA PRIVATE KEY-----
