@@ -22,6 +22,7 @@ Metrics/BlockLength:
     - context
     - describe
     - each
+    - namespace
     - tap
 
 Metrics/LineLength:
