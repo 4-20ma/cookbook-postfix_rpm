@@ -88,6 +88,7 @@ namespace :publish do
     task :tag do
       tag_name = "v#{Version.current}"
       puts "Tagging deployment as '#{tag_name}'"
+      `git add CHANGELOG.md`
       `git add #{Version.version_file('').basename}`
       puts `git commit -m 'Version bump to #{tag_name}'`
       `git tag -a -f -m 'Version #{tag_name}' #{tag_name}`
