@@ -34,7 +34,7 @@ require 'rake'
 # $ rake publish:minor        # new functionality; backwards-compatible manner
 # $ rake publish:major        # incompatible API changes
 # $ rake publish:now          # publish without version bump
-# $ rake publish:tag          # tag publishment as current version
+# $ rake publish:tag          # tag deployment as current version
 # $ rake publish:supermarket  # publish cookbook(s) to Chef supermarket
 
 #--------------------------------------------------------------------- publish
