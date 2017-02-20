@@ -2,47 +2,24 @@
 
 Instructions for publishing this cookbook to the Chef Supermarket:
 
-- Update `metadata.rb` with new cookbook version
-
-        version           '2.0.1'
-
-- Ensure all tests pass
-
-        $ rake
-
-- Update `CHANGELOG.md` with recent changes
-
-        $ rake changelog[v2.0.0] # use version of most-recent release tag
-  
-    - Prepend contents of `changelog.tmp` to `CHANGELOG.md`
-    - Replace `HEAD` with current version number (match `metadata.rb` version)
-    - Replace `YYYY-MM-DD` with current date, if necessary
-    - For each commit line item:
-        - Remove `Fix #xx ` string (regex: `Fix #\d+\s`)
-        - Replace `TYPE` with one of:
-          `BREAK`   - breaking changes
-          `FIX`     - bug fix
-          `IMPROVE` - improvement of existing feature
-          `NEW`     - new feature
-    - Remove `changelog.tmp`
-
-- Commit changes to `metadata.rb` and `CHANGELOG.md`
-
-        $ git add metadata.rb CHANGELOG.md
-        $ git commit -m 'Update changelog, bump version'
-        $ git push
-
-- Ensure working directory is clean; add/stash changes, if necessary
-
-        $ git add . && git stash
-
 - Select appropriate chef environment
 
         $ chefvm use chef.io
 
-- Publish cookbook
+- Ensure all style/specs pass
 
-        $ rake publish
+        $ rake
+
+- Update `CHANGELOG.md` with recent changes; adjust wording of Issues and Pull Requests and re-run as required.
+
+        $ rake changelog
+
+- Publish cookbook (select revision, minor, major, or no version bump)
+
+        $ rake publish        # revision version bump, tag, publish
+        $ rake publish:minor  # minor version bump, tag, publish
+        $ rake publish:major  # major version bump, tag, publish
+        # rake publish:now    # use existing version, tag, publish
 
 
 ## Config reference
