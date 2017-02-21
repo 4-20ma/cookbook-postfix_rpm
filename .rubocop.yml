@@ -2,6 +2,7 @@
 
 AllCops:
   Include:
+    - rakelib/**/*
     - Berksfile
     - Gemfile
     - Rakefile
